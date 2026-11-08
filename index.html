@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CESAE Viagens</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-airplane"></i> CESAE Viagens
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li>
+
+          <!-- Destinos com seta e menu suspenso -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="menuDestinos"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Destinos
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="menuDestinos">
+              <li><a class="dropdown-item" href="#lisboa">Lisboa</a></li>
+              <li><a class="dropdown-item" href="#paris">Paris</a></li>
+              <li><a class="dropdown-item" href="#roma">Roma</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#planos">Planos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#perguntas">Perguntas</a>
+          </li>
+        </ul>
+
+        <a class="btn btn-warning" href="#proposta">Reservar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Destaque inicial -->
+  <header class="bg-dark text-white text-center py-5" id="inicio">
+    <div class="container py-4">
+      <h1 class="fw-bold">Descubra o mundo com a CESAE Viagens</h1>
+      <p class="lead text-white-50">
+        Viagens à medida, com apoio em português do primeiro ao último dia.
+      </p>
+      <a href="#planos" class="btn btn-warning me-2">Ver planos</a>
+      <a href="#destinos" class="btn btn-outline-light">Ver destinos</a>
+    </div>
+  </header>
+
+  <!-- Vantagens -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Porquê a CESAE Viagens?</h2>
+
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <i class="bi bi-geo-alt fs-2 text-primary"></i>
+          <h3 class="h5 mt-3">Destinos à medida</h3>
+          <p class="text-secondary">
+            Escolhemos o roteiro consigo, do primeiro café ao último pôr do sol.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <i class="bi bi-shield-check fs-2 text-primary"></i>
+          <h3 class="h5 mt-3">Viaja em segurança</h3>
+          <p class="text-secondary">
+            Seguro incluído e apoio 24 horas, em português, onde quer que esteja.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <i class="bi bi-calendar-check fs-2 text-primary"></i>
+          <h3 class="h5 mt-3">Datas flexíveis</h3>
+          <p class="text-secondary">
+            Altere a data da viagem até 15 dias antes, sem custos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinos em carrossel -->
+  <section class="bg-light py-5" id="destinos">
+    <div class="container">
+      <h2 class="text-center mb-4">Destinos em destaque</h2>
+
+      <div id="carrosselDestinos" class="carousel slide mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carrosselDestinos"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Lisboa"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselDestinos"
+            data-bs-slide-to="1"
+            aria-label="Paris"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrosselDestinos"
+            data-bs-slide-to="2"
+            aria-label="Roma"
+          ></button>
+        </div>
+
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active" id="lisboa">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_01.JPG/960px-Arco_Triunfal_da_Rua_Augusta%2C_Plaza_del_Comercio%2C_Lisboa%2C_Portugal%2C_2012-05-12%2C_DD_01.JPG"
+              class="d-block w-100"
+              style="height: 360px; object-fit: cover;"
+              alt="Arco da Rua Augusta, em Lisboa"
+            >
+            <div class="carousel-caption">
+              <h3 style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;">Lisboa</h3>
+              <p  style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;">Arco da Rua Augusta, miradouros e pastéis de nata.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item" id="paris">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eiffel_Tower_at_night%2C_Paris_20_April_2013.jpg/1280px-Eiffel_Tower_at_night%2C_Paris_20_April_2013.jpg"
+              class="d-block w-100"
+              style="height: 360px; object-fit: cover;"
+              alt="Torre Eiffel em Paris"
+            >
+            <div class="carousel-caption">
+              <h3  style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;">Paris</h3>
+              <p style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;" >Arte, croissants e passeios junto ao Sena.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item" id="roma">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg"
+              class="d-block w-100"
+              style="height: 360px; object-fit: cover;"
+              alt="Coliseu de Roma"
+            >
+            <div class="carousel-caption">
+              <h3  style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;">Roma</h3>
+             <p style="color: white; font-weight: bold; text-shadow: 2px 2px 6px #000;">História, Coliseu e sabores italianos.</p>
+            </div>
+          </div>
+        </div>
+            <!--Troquei a font weight e adicionei sombra para que as letras brancas ficassem mais visiveis em imagens claras-->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrosselDestinos"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrosselDestinos"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Seguinte</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos em cards -->
+  <section class="py-5" id="planos">
+    <div class="container">
+      <h2 class="text-center mb-4">Os nossos planos</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-header">Essencial</div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title display-6">199 €</h3>
+              <p class="text-secondary">por pessoa</p>
+              <ul class="list-unstyled">
+                <li>Voos e alojamento</li>
+                <li>Seguro de viagem</li>
+                <li>Apoio por email</li>
+              </ul>
+              <a href="#proposta" class="btn btn-outline-primary mt-auto">Escolher</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center border-primary shadow-sm">
+            <div class="card-header bg-primary text-white">
+              Família (mais popular)
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title display-6">349 €</h3>
+              <p class="text-secondary">por pessoa</p>
+              <ul class="list-unstyled">
+                <li>Tudo do Essencial</li>
+                <li>Transfers incluídos</li>
+                <li>Atividades para crianças</li>
+                <li>Apoio 24 horas</li>
+              </ul>
+              <a href="#proposta" class="btn btn-primary mt-auto">Escolher</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-header">Premium</div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title display-6">599 €</h3>
+              <p class="text-secondary">por pessoa</p>
+              <ul class="list-unstyled">
+                <li>Tudo da Família</li>
+                <li>Hotéis de 5 estrelas</li>
+                <li>Guia privado</li>
+                <li>Cancelamento flexível</li>
+              </ul>
+              <a href="#proposta" class="btn btn-outline-primary mt-auto">Escolher</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perguntas frequentes -->
+  <section class="bg-light py-5" id="perguntas">
+    <div class="container">
+      <h2 class="text-center mb-4">Perguntas frequentes</h2>
+
+      <div class="accordion mx-auto" id="perguntasFrequentes" style="max-width: 800px;">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta1"
+              aria-expanded="true"
+              aria-controls="resposta1"
+            >
+              Posso pagar em prestações?
+            </button>
+          </h3>
+          <div
+            id="resposta1"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#perguntasFrequentes"
+          >
+            <div class="accordion-body">
+              Sim. Dividimos o valor em até 6 prestações, sem juros.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta2"
+              aria-expanded="false"
+              aria-controls="resposta2"
+            >
+              O que acontece se eu precisar de cancelar?
+            </button>
+          </h3>
+          <div
+            id="resposta2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#perguntasFrequentes"
+          >
+            <div class="accordion-body">
+              As condições de cancelamento dependem do plano escolhido.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#resposta3"
+              aria-expanded="false"
+              aria-controls="resposta3"
+            >
+              As crianças pagam o mesmo?
+            </button>
+          </h3>
+          <div
+            id="resposta3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#perguntasFrequentes"
+          >
+            <div class="accordion-body">
+              O preço pode variar consoante a idade e o destino.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de contacto -->
+  <section class="py-5" id="proposta">
+    <div class="container">
+      <h2 class="text-center mb-4">Peça uma proposta</h2>
+
+      <form class="mx-auto" style="max-width: 800px;">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+
+          <div class="col-md-6">
+            <label for="destinoFormulario" class="form-label">Destino</label>
+            <select class="form-select" id="destinoFormulario">
+              <option>Lisboa</option>
+              <option>Paris</option>
+              <option>Roma</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="pessoas" class="form-label">Número de pessoas</label>
+            <input type="number" class="form-control" id="pessoas" min="1" value="2">
+          </div>
+
+          <div class="col-12">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="4"></textarea>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="consentimento" required>
+              <label class="form-check-label" for="consentimento">
+                Aceito ser contactado(a) com a proposta
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100">Enviar pedido</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h2 class="h5"><i class="bi bi-airplane"></i> CESAE Viagens</h2>
+          <p class="text-white-50">Viagens à medida desde 2010.</p>
+        </div>
+
+        <div class="col-md-4">
+          <h2 class="h5">Ligações</h2>
+          <a class="d-block link-light" href="#planos">Planos</a>
+          <a class="d-block link-light" href="#perguntas">Perguntas frequentes</a>
+          <a class="d-block link-light" href="#proposta">Contacto</a>
+        </div>
+
+        <div class="col-md-4">
+  <h2 class="h5">Newsletter</h2>
+
+  <form class="input-group">
+    <input
+      type="email"
+      class="form-control"
+      placeholder="O seu email"
+      aria-label="O seu email"
+    >
+    <button class="btn btn-warning" type="submit">Subscrever</button>
+  </form>
+
+        <!-- Adicionei links para redes sociais com ícones do Bootstrap Icons -->
+  <div class="mt-3">
+  <a href="https://www.instagram.com/" class="text-white text-decoration-none me-3" aria-label="Instagram">
+    <i class="bi bi-instagram fs-5"></i>
+  </a>
+  <a href="https://www.facebook.com/" class="text-white text-decoration-none me-3" aria-label="Facebook">
+    <i class="bi bi-facebook fs-5"></i>
+  </a>
+  <a href="https://www.youtube.com/" class="text-white text-decoration-none" aria-label="YouTube">
+    <i class="bi bi-youtube fs-5"></i>
+  </a>
+</div>
+
+</div>
+      <hr>
+      <p class="text-center text-white-50 mb-0">© 2026 CESAE Viagens</p>
+      
+      <!--Também me coloquei como desenvolvedora-->
+      <p class="text-center text-white-50 mb-0">Dev. Inês</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
